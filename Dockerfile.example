@@ -1,0 +1,13 @@
+# Example Dockerfile for a Java JAR built by Maven
+# Copy the generated jar from target to the image and run it
+
+FROM eclipse-temurin:17-jre-jammy
+WORKDIR /app
+
+# Replace FeederBusERP-1.0-SNAPSHOT.jar with the actual artifact name if different
+ARG JAR_FILE=target/FeederBusERP-1.0-SNAPSHOT.jar
+
+COPY ${JAR_FILE} /app/app.jar
+
+EXPOSE 8080
+ENTRYPOINT ["java", "-jar", "/app/app.jar"]
