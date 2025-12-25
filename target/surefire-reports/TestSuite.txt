@@ -1,13 +1,13 @@
 -------------------------------------------------------------------------------
-Test set: login.LoginTest
+Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 10, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 67.41 s <<< FAILURE! -- in login.LoginTest
-login.LoginTest.loginButtonDisabledWithoutInput -- Time elapsed: 3.164 s <<< FAILURE!
+Tests run: 10, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 65.31 s <<< FAILURE! -- in TestSuite
+login.LoginTest.loginButtonDisabledWithoutInput -- Time elapsed: 3.203 s <<< FAILURE!
 java.lang.AssertionError: Login button should be disabled when no login input is entered expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertTrue(Assert.java:57)
-	at login.LoginTest.loginButtonDisabledWithoutInput(LoginTest.java:101)
+	at login.LoginTest.loginButtonDisabledWithoutInput(LoginTest.java:96)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -31,26 +31,25 @@ java.lang.AssertionError: Login button should be disabled when no login input is
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
 	at org.testng.TestNG.runSuites(TestNG.java:1112)
 	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-login.LoginTest.loginWithValidCredCaseSensitive -- Time elapsed: 30.01 s <<< FAILURE!
+login.LoginTest.loginWithValidCredCaseSensitive -- Time elapsed: 30.03 s <<< FAILURE!
 com.microsoft.playwright.TimeoutError: 
 Error {
   message='Timeout 30000ms exceeded.
   name='TimeoutError
   stack='TimeoutError: Timeout 30000ms exceeded.
-    at ProgressController.run (C:\Users\HP\AppData\Local\Temp\playwright-java-11578875638005377113\package\lib\server\progress.js:75:26)
-    at Frame.fill (C:\Users\HP\AppData\Local\Temp\playwright-java-11578875638005377113\package\lib\server\frames.js:1072:23)
-    at FrameDispatcher.fill (C:\Users\HP\AppData\Local\Temp\playwright-java-11578875638005377113\package\lib\server\dispatchers\frameDispatcher.js:170:30)
-    at FrameDispatcher._handleCommand (C:\Users\HP\AppData\Local\Temp\playwright-java-11578875638005377113\package\lib\server\dispatchers\dispatcher.js:94:40)
-    at DispatcherConnection.dispatch (C:\Users\HP\AppData\Local\Temp\playwright-java-11578875638005377113\package\lib\server\dispatchers\dispatcher.js:361:39)
+    at ProgressController.run (C:\Users\HP\AppData\Local\Temp\playwright-java-2581795909821857912\package\lib\server\progress.js:75:26)
+    at Frame.fill (C:\Users\HP\AppData\Local\Temp\playwright-java-2581795909821857912\package\lib\server\frames.js:1072:23)
+    at FrameDispatcher.fill (C:\Users\HP\AppData\Local\Temp\playwright-java-2581795909821857912\package\lib\server\dispatchers\frameDispatcher.js:170:30)
+    at FrameDispatcher._handleCommand (C:\Users\HP\AppData\Local\Temp\playwright-java-2581795909821857912\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\HP\AppData\Local\Temp\playwright-java-2581795909821857912\package\lib\server\dispatchers\dispatcher.js:361:39)
 }
 Call log:
 -   - waiting for locator("//input[@id='username']")
@@ -69,7 +68,7 @@ Call log:
 	at com.microsoft.playwright.impl.LocatorImpl.fill(LocatorImpl.java:250)
 	at com.microsoft.playwright.Locator.fill(Locator.java:3075)
 	at login.LoginLocators.enterLoginEmailid(LoginLocators.java:26)
-	at login.LoginTest.loginWithValidCredCaseSensitive(LoginTest.java:118)
+	at login.LoginTest.loginWithValidCredCaseSensitive(LoginTest.java:113)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -93,10 +92,9 @@ Call log:
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
 	at org.testng.TestNG.runSuites(TestNG.java:1112)
 	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
-	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
 	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
@@ -105,11 +103,11 @@ Caused by: com.microsoft.playwright.TimeoutError: Error {
   message='Timeout 30000ms exceeded.
   name='TimeoutError
   stack='TimeoutError: Timeout 30000ms exceeded.
-    at ProgressController.run (C:\Users\HP\AppData\Local\Temp\playwright-java-11578875638005377113\package\lib\server\progress.js:75:26)
-    at Frame.fill (C:\Users\HP\AppData\Local\Temp\playwright-java-11578875638005377113\package\lib\server\frames.js:1072:23)
-    at FrameDispatcher.fill (C:\Users\HP\AppData\Local\Temp\playwright-java-11578875638005377113\package\lib\server\dispatchers\frameDispatcher.js:170:30)
-    at FrameDispatcher._handleCommand (C:\Users\HP\AppData\Local\Temp\playwright-java-11578875638005377113\package\lib\server\dispatchers\dispatcher.js:94:40)
-    at DispatcherConnection.dispatch (C:\Users\HP\AppData\Local\Temp\playwright-java-11578875638005377113\package\lib\server\dispatchers\dispatcher.js:361:39)
+    at ProgressController.run (C:\Users\HP\AppData\Local\Temp\playwright-java-2581795909821857912\package\lib\server\progress.js:75:26)
+    at Frame.fill (C:\Users\HP\AppData\Local\Temp\playwright-java-2581795909821857912\package\lib\server\frames.js:1072:23)
+    at FrameDispatcher.fill (C:\Users\HP\AppData\Local\Temp\playwright-java-2581795909821857912\package\lib\server\dispatchers\frameDispatcher.js:170:30)
+    at FrameDispatcher._handleCommand (C:\Users\HP\AppData\Local\Temp\playwright-java-2581795909821857912\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\HP\AppData\Local\Temp\playwright-java-2581795909821857912\package\lib\server\dispatchers\dispatcher.js:361:39)
 }
 Call log:
 -   - waiting for locator("//input[@id='username']")
@@ -117,5 +115,5 @@ Call log:
 	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:254)
 	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
 	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:130)
-	... 44 more
+	... 43 more
 

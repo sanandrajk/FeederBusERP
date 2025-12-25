@@ -21,7 +21,7 @@ public class SetupBrowser {
         playwright = Playwright.create();
         browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
         page = browser.newPage();
-        page.navigate("https://xplor-feeder-erp-test.netlify.app/");
+        page.navigate(values.Values.BASE_URL);
         System.out.println("Browser and URL are launched");
     }
 

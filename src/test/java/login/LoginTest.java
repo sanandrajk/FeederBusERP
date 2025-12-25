@@ -8,10 +8,6 @@ import org.testng.Assert;
 import org.testng.annotations.*;
     
 public class LoginTest extends SetupBrowser {
-
-    public static String expectedErrorText = "Invalid username or password";
-    public static String expectedErrorTextForEmpty = "Please enter both username and password";
-
     private LoginLocators locate;
     private DashboardLocators dash;
 
@@ -23,75 +19,74 @@ public class LoginTest extends SetupBrowser {
 
     @Test
     public void loginWithValidCred() throws InterruptedException {
-        locate.enterLoginEmailid("sanand@mailinator.com");
-        locate.enterLoginPassword("Sanand@123");
+        locate.enterLoginEmailid(values.Values.LOGIN_EMAIL);
+        locate.enterLoginPassword(values.Values.LOGIN_PASSWORD);
         locate.clickLoginButton();
         Thread.sleep(3000);
         String actualText = dash.dashboardText();
-        Assert.assertEquals("Metro Connect", actualText);
+        Assert.assertEquals(values.Values.DASHBOARD_PAGE_METRO_TEXT, actualText);
         System.out.println("Login Successful, Dashboard page is displayed");
     }
-//test
+
     @Test
     public void loginWithInvalidCred() throws InterruptedException {
-        locate.enterLoginEmailid("santhosh@mailinator.com");
-        locate.enterLoginPassword("Santhosh@123");
+        locate.enterLoginEmailid(values.Values.INVALID_LOGIN_EMAIL);
+        locate.enterLoginPassword(values.Values.INVALID_LOGIN_PASSWORD);
         locate.clickLoginButton();
         String actualError = locate.getLoginErrorText();
-        Assert.assertEquals(actualError, expectedErrorText);
+        Assert.assertEquals(actualError, values.Values.EXPECTED_ERROR_TEXT_INVALID_LOGIN);
         System.out.println("Login Failed, Error message is displayed as expected");
     }
 
     @Test
     public void loginWithInvalidEmail() throws InterruptedException {
-        locate.enterLoginEmailid("santhosh@mailinator.com");
-        locate.enterLoginPassword("Sanand@123");
+        locate.enterLoginEmailid(values.Values.INVALID_LOGIN_EMAIL);
+        locate.enterLoginPassword(values.Values.LOGIN_PASSWORD);
         locate.clickLoginButton();
         String actualError = locate.getLoginErrorText();
-        Assert.assertEquals(actualError, expectedErrorText);
+        Assert.assertEquals(actualError, values.Values.EXPECTED_ERROR_TEXT_INVALID_LOGIN);
         System.out.println("Login Failed, Error message is displayed as expected");
     }
 
     @Test
     public void loginWithInvalidPassword() throws InterruptedException {
-        locate.enterLoginEmailid("sanand@mailinator.com");
-        locate.enterLoginPassword("Santhosh@123");
+        locate.enterLoginEmailid(values.Values.LOGIN_EMAIL);
+        locate.enterLoginPassword(values.Values.INVALID_LOGIN_PASSWORD);
         locate.clickLoginButton();
         String actualError = locate.getLoginErrorText();
-        Assert.assertEquals(actualError, expectedErrorText);
+        Assert.assertEquals(actualError, values.Values.EXPECTED_ERROR_TEXT_INVALID_LOGIN);
         System.out.println("Login Failed, Error message is displayed as expected");
     }
 
     @Test
     public void loginWithEmptyUsername() throws InterruptedException {
         locate.enterLoginEmailid("");
-        locate.enterLoginPassword("Sanand@123");
+        locate.enterLoginPassword(values.Values.LOGIN_PASSWORD);
         locate.clickLoginButton();
         String actualError = locate.getLoginErrorText();
-        Assert.assertEquals(actualError, expectedErrorTextForEmpty);
+        Assert.assertEquals(actualError, values.Values.EXPECTED_ERROR_TEXT_FOR_EMPTY_LOGIN);
         System.out.println("Login Failed, Error message is displayed as expected");
     }
 
     @Test
     public void loginWithEmptyPassword() throws InterruptedException {
-        locate.enterLoginEmailid("sanand@mailinator.com");
+        locate.enterLoginEmailid(values.Values.LOGIN_EMAIL);
         locate.enterLoginPassword("");
         locate.clickLoginButton();
         String actualError = locate.getLoginErrorText();
-        Assert.assertEquals(actualError, expectedErrorTextForEmpty);
+        Assert.assertEquals(actualError, values.Values.EXPECTED_ERROR_TEXT_FOR_EMPTY_LOGIN);
         System.out.println("Login Failed, Error message is displayed as expected");
     }
 
-        @Test
-        public void loginWithEmptyInputs() throws InterruptedException {
+    @Test
+    public void loginWithEmptyInputs() throws InterruptedException {
         locate.enterLoginEmailid("");
         locate.enterLoginPassword("");
         locate.clickLoginButton();
         String actualError = locate.getLoginErrorText();
-        Assert.assertEquals(actualError, expectedErrorTextForEmpty);
+        Assert.assertEquals(actualError, values.Values.EXPECTED_ERROR_TEXT_FOR_EMPTY_LOGIN);
         System.out.println("Login Failed, Error message is displayed as expected");
     }
-
 
     @Test
     public void loginButtonDisabledWithoutInput() throws InterruptedException {
@@ -104,8 +99,8 @@ public class LoginTest extends SetupBrowser {
     @Test
     public void loginButtonEnabledAfterInput() throws InterruptedException {
         // Enter valid input fields and verify the login button becomes enabled
-        locate.enterLoginEmailid("sanand@mailinator.com");
-        locate.enterLoginPassword("Sanand@123");
+        locate.enterLoginEmailid(values.Values.LOGIN_EMAIL);
+        locate.enterLoginPassword(values.Values.LOGIN_PASSWORD);
         // small wait for inputs to process & UI to enable the button
         Thread.sleep(500);
         boolean isEnabled = locate.isLoginButtonEnabled();
@@ -115,12 +110,12 @@ public class LoginTest extends SetupBrowser {
 
     @Test
     public void loginWithValidCredCaseSensitive() throws InterruptedException {
-        locate.enterLoginEmailid("SANAND@MAILINATOR.COM");
-        locate.enterLoginPassword("Sanand@123");
+        locate.enterLoginEmailid(values.Values.LOGIN_UPPERCASE_EMAIL);
+        locate.enterLoginPassword(values.Values.LOGIN_PASSWORD);
         locate.clickLoginButton();
         Thread.sleep(3000);
         String actualText = dash.dashboardText();
-        Assert.assertEquals("Metro Connect", actualText);
+        Assert.assertEquals(values.Values.DASHBOARD_PAGE_METRO_TEXT, actualText);
         System.out.println("Login Successful, Dashboard page is displayed");
     }
 

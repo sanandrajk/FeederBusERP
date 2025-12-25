@@ -3,7 +3,7 @@ package dashboard;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 
-public class DasLocators {
+public class DashboardTest {
     
     private Page page;
     private Locator loginEmailid;

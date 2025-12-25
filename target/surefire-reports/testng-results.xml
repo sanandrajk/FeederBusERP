@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="10" passed="8" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-12-02T18:29:08 IST" name="Surefire suite" finished-at="2025-12-02T18:30:14 IST" duration-ms="66102">
+  <suite started-at="2025-12-25T23:29:44 IST" name="Suite" finished-at="2025-12-25T23:30:48 IST" duration-ms="63505">
     <groups>
     </groups>
-    <test started-at="2025-12-02T18:29:08 IST" name="Surefire test" finished-at="2025-12-02T18:30:14 IST" duration-ms="66102">
+    <test started-at="2025-12-25T23:29:44 IST" name="LoginTests" finished-at="2025-12-25T23:30:48 IST" duration-ms="63505">
       <class name="login.LoginTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:login.LoginTest@7fe8ea47]" started-at="2025-12-02T18:29:08 IST" name="setup" finished-at="2025-12-02T18:29:34 IST" duration-ms="26174" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:login.LoginTest@1df82230]" started-at="2025-12-25T23:29:44 IST" name="setup" finished-at="2025-12-25T23:30:08 IST" duration-ms="23485" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="init()[pri:0, instance:login.LoginTest@7fe8ea47]" started-at="2025-12-02T18:29:34 IST" name="init" finished-at="2025-12-02T18:29:35 IST" duration-ms="47" status="PASS">
+        <test-method is-config="true" signature="init()[pri:0, instance:login.LoginTest@1df82230]" started-at="2025-12-25T23:30:08 IST" name="init" finished-at="2025-12-25T23:30:08 IST" duration-ms="22" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method signature="loginButtonDisabledWithoutInput()[pri:0, instance:login.LoginTest@7fe8ea47]" started-at="2025-12-02T18:29:35 IST" name="loginButtonDisabledWithoutInput" finished-at="2025-12-02T18:29:38 IST" duration-ms="3402" status="FAIL">
+        <test-method signature="loginButtonDisabledWithoutInput()[pri:0, instance:login.LoginTest@1df82230]" started-at="2025-12-25T23:30:08 IST" name="loginButtonDisabledWithoutInput" finished-at="2025-12-25T23:30:11 IST" duration-ms="3225" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[Login button should be disabled when no login input is entered expected [true] but found [false]]]>
@@ -25,7 +25,7 @@
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1578)
 at org.testng.Assert.assertTrue(Assert.java:57)
-at login.LoginTest.loginButtonDisabledWithoutInput(LoginTest.java:101)
+at login.LoginTest.loginButtonDisabledWithoutInput(LoginTest.java:96)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -49,10 +49,9 @@ at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
 at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
 at org.testng.TestNG.runSuites(TestNG.java:1112)
 at org.testng.TestNG.run(TestNG.java:1079)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
-at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
-at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
 at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
 at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
@@ -63,86 +62,86 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginButtonDisabledWithoutInput -->
-        <test-method is-config="true" signature="init()[pri:0, instance:login.LoginTest@7fe8ea47]" started-at="2025-12-02T18:29:38 IST" name="init" finished-at="2025-12-02T18:29:38 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="init()[pri:0, instance:login.LoginTest@1df82230]" started-at="2025-12-25T23:30:11 IST" name="init" finished-at="2025-12-25T23:30:11 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method signature="loginButtonEnabledAfterInput()[pri:0, instance:login.LoginTest@7fe8ea47]" started-at="2025-12-02T18:29:38 IST" name="loginButtonEnabledAfterInput" finished-at="2025-12-02T18:29:39 IST" duration-ms="1121" status="PASS">
+        <test-method signature="loginButtonEnabledAfterInput()[pri:0, instance:login.LoginTest@1df82230]" started-at="2025-12-25T23:30:11 IST" name="loginButtonEnabledAfterInput" finished-at="2025-12-25T23:30:12 IST" duration-ms="651" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginButtonEnabledAfterInput -->
-        <test-method is-config="true" signature="init()[pri:0, instance:login.LoginTest@7fe8ea47]" started-at="2025-12-02T18:29:39 IST" name="init" finished-at="2025-12-02T18:29:39 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="init()[pri:0, instance:login.LoginTest@1df82230]" started-at="2025-12-25T23:30:12 IST" name="init" finished-at="2025-12-25T23:30:12 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method signature="loginWithEmptyInputs()[pri:0, instance:login.LoginTest@7fe8ea47]" started-at="2025-12-02T18:29:39 IST" name="loginWithEmptyInputs" finished-at="2025-12-02T18:29:39 IST" duration-ms="244" status="PASS">
+        <test-method signature="loginWithEmptyInputs()[pri:0, instance:login.LoginTest@1df82230]" started-at="2025-12-25T23:30:12 IST" name="loginWithEmptyInputs" finished-at="2025-12-25T23:30:12 IST" duration-ms="217" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithEmptyInputs -->
-        <test-method is-config="true" signature="init()[pri:0, instance:login.LoginTest@7fe8ea47]" started-at="2025-12-02T18:29:39 IST" name="init" finished-at="2025-12-02T18:29:39 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="init()[pri:0, instance:login.LoginTest@1df82230]" started-at="2025-12-25T23:30:12 IST" name="init" finished-at="2025-12-25T23:30:12 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method signature="loginWithEmptyPassword()[pri:0, instance:login.LoginTest@7fe8ea47]" started-at="2025-12-02T18:29:39 IST" name="loginWithEmptyPassword" finished-at="2025-12-02T18:29:39 IST" duration-ms="160" status="PASS">
+        <test-method signature="loginWithEmptyPassword()[pri:0, instance:login.LoginTest@1df82230]" started-at="2025-12-25T23:30:12 IST" name="loginWithEmptyPassword" finished-at="2025-12-25T23:30:12 IST" duration-ms="127" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithEmptyPassword -->
-        <test-method is-config="true" signature="init()[pri:0, instance:login.LoginTest@7fe8ea47]" started-at="2025-12-02T18:29:40 IST" name="init" finished-at="2025-12-02T18:29:40 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="init()[pri:0, instance:login.LoginTest@1df82230]" started-at="2025-12-25T23:30:12 IST" name="init" finished-at="2025-12-25T23:30:12 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method signature="loginWithEmptyUsername()[pri:0, instance:login.LoginTest@7fe8ea47]" started-at="2025-12-02T18:29:40 IST" name="loginWithEmptyUsername" finished-at="2025-12-02T18:29:40 IST" duration-ms="139" status="PASS">
+        <test-method signature="loginWithEmptyUsername()[pri:0, instance:login.LoginTest@1df82230]" started-at="2025-12-25T23:30:12 IST" name="loginWithEmptyUsername" finished-at="2025-12-25T23:30:12 IST" duration-ms="139" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithEmptyUsername -->
-        <test-method is-config="true" signature="init()[pri:0, instance:login.LoginTest@7fe8ea47]" started-at="2025-12-02T18:29:40 IST" name="init" finished-at="2025-12-02T18:29:40 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="init()[pri:0, instance:login.LoginTest@1df82230]" started-at="2025-12-25T23:30:12 IST" name="init" finished-at="2025-12-25T23:30:12 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method signature="loginWithInvalidCred()[pri:0, instance:login.LoginTest@7fe8ea47]" started-at="2025-12-02T18:29:40 IST" name="loginWithInvalidCred" finished-at="2025-12-02T18:29:40 IST" duration-ms="461" status="PASS">
+        <test-method signature="loginWithInvalidCred()[pri:0, instance:login.LoginTest@1df82230]" started-at="2025-12-25T23:30:12 IST" name="loginWithInvalidCred" finished-at="2025-12-25T23:30:13 IST" duration-ms="999" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithInvalidCred -->
-        <test-method is-config="true" signature="init()[pri:0, instance:login.LoginTest@7fe8ea47]" started-at="2025-12-02T18:29:40 IST" name="init" finished-at="2025-12-02T18:29:40 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="init()[pri:0, instance:login.LoginTest@1df82230]" started-at="2025-12-25T23:30:13 IST" name="init" finished-at="2025-12-25T23:30:13 IST" duration-ms="8" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method signature="loginWithInvalidEmail()[pri:0, instance:login.LoginTest@7fe8ea47]" started-at="2025-12-02T18:29:40 IST" name="loginWithInvalidEmail" finished-at="2025-12-02T18:29:40 IST" duration-ms="177" status="PASS">
+        <test-method signature="loginWithInvalidEmail()[pri:0, instance:login.LoginTest@1df82230]" started-at="2025-12-25T23:30:13 IST" name="loginWithInvalidEmail" finished-at="2025-12-25T23:30:13 IST" duration-ms="201" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithInvalidEmail -->
-        <test-method is-config="true" signature="init()[pri:0, instance:login.LoginTest@7fe8ea47]" started-at="2025-12-02T18:29:40 IST" name="init" finished-at="2025-12-02T18:29:40 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="init()[pri:0, instance:login.LoginTest@1df82230]" started-at="2025-12-25T23:30:13 IST" name="init" finished-at="2025-12-25T23:30:13 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method signature="loginWithInvalidPassword()[pri:0, instance:login.LoginTest@7fe8ea47]" started-at="2025-12-02T18:29:40 IST" name="loginWithInvalidPassword" finished-at="2025-12-02T18:29:41 IST" duration-ms="242" status="PASS">
+        <test-method signature="loginWithInvalidPassword()[pri:0, instance:login.LoginTest@1df82230]" started-at="2025-12-25T23:30:13 IST" name="loginWithInvalidPassword" finished-at="2025-12-25T23:30:14 IST" duration-ms="402" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithInvalidPassword -->
-        <test-method is-config="true" signature="init()[pri:0, instance:login.LoginTest@7fe8ea47]" started-at="2025-12-02T18:29:41 IST" name="init" finished-at="2025-12-02T18:29:41 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="init()[pri:0, instance:login.LoginTest@1df82230]" started-at="2025-12-25T23:30:14 IST" name="init" finished-at="2025-12-25T23:30:14 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method signature="loginWithValidCred()[pri:0, instance:login.LoginTest@7fe8ea47]" started-at="2025-12-02T18:29:41 IST" name="loginWithValidCred" finished-at="2025-12-02T18:29:44 IST" duration-ms="3126" status="PASS">
+        <test-method signature="loginWithValidCred()[pri:0, instance:login.LoginTest@1df82230]" started-at="2025-12-25T23:30:14 IST" name="loginWithValidCred" finished-at="2025-12-25T23:30:17 IST" duration-ms="3166" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithValidCred -->
-        <test-method is-config="true" signature="init()[pri:0, instance:login.LoginTest@7fe8ea47]" started-at="2025-12-02T18:29:44 IST" name="init" finished-at="2025-12-02T18:29:44 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="init()[pri:0, instance:login.LoginTest@1df82230]" started-at="2025-12-25T23:30:17 IST" name="init" finished-at="2025-12-25T23:30:17 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method signature="loginWithValidCredCaseSensitive()[pri:0, instance:login.LoginTest@7fe8ea47]" started-at="2025-12-02T18:29:44 IST" name="loginWithValidCredCaseSensitive" finished-at="2025-12-02T18:30:14 IST" duration-ms="30012" status="FAIL">
+        <test-method signature="loginWithValidCredCaseSensitive()[pri:0, instance:login.LoginTest@1df82230]" started-at="2025-12-25T23:30:17 IST" name="loginWithValidCredCaseSensitive" finished-at="2025-12-25T23:30:47 IST" duration-ms="30023" status="FAIL">
           <exception class="com.microsoft.playwright.TimeoutError">
             <message>
               <![CDATA[Error {
   message='Timeout 30000ms exceeded.
   name='TimeoutError
   stack='TimeoutError: Timeout 30000ms exceeded.
-    at ProgressController.run (C:\Users\HP\AppData\Local\Temp\playwright-java-11578875638005377113\package\lib\server\progress.js:75:26)
-    at Frame.fill (C:\Users\HP\AppData\Local\Temp\playwright-java-11578875638005377113\package\lib\server\frames.js:1072:23)
-    at FrameDispatcher.fill (C:\Users\HP\AppData\Local\Temp\playwright-java-11578875638005377113\package\lib\server\dispatchers\frameDispatcher.js:170:30)
-    at FrameDispatcher._handleCommand (C:\Users\HP\AppData\Local\Temp\playwright-java-11578875638005377113\package\lib\server\dispatchers\dispatcher.js:94:40)
-    at DispatcherConnection.dispatch (C:\Users\HP\AppData\Local\Temp\playwright-java-11578875638005377113\package\lib\server\dispatchers\dispatcher.js:361:39)
+    at ProgressController.run (C:\Users\HP\AppData\Local\Temp\playwright-java-2581795909821857912\package\lib\server\progress.js:75:26)
+    at Frame.fill (C:\Users\HP\AppData\Local\Temp\playwright-java-2581795909821857912\package\lib\server\frames.js:1072:23)
+    at FrameDispatcher.fill (C:\Users\HP\AppData\Local\Temp\playwright-java-2581795909821857912\package\lib\server\dispatchers\frameDispatcher.js:170:30)
+    at FrameDispatcher._handleCommand (C:\Users\HP\AppData\Local\Temp\playwright-java-2581795909821857912\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\HP\AppData\Local\Temp\playwright-java-2581795909821857912\package\lib\server\dispatchers\dispatcher.js:361:39)
 }
 Call log:
 -   - waiting for locator("//input[@id='username']")
@@ -153,11 +152,11 @@ Call log:
   message='Timeout 30000ms exceeded.
   name='TimeoutError
   stack='TimeoutError: Timeout 30000ms exceeded.
-    at ProgressController.run (C:\Users\HP\AppData\Local\Temp\playwright-java-11578875638005377113\package\lib\server\progress.js:75:26)
-    at Frame.fill (C:\Users\HP\AppData\Local\Temp\playwright-java-11578875638005377113\package\lib\server\frames.js:1072:23)
-    at FrameDispatcher.fill (C:\Users\HP\AppData\Local\Temp\playwright-java-11578875638005377113\package\lib\server\dispatchers\frameDispatcher.js:170:30)
-    at FrameDispatcher._handleCommand (C:\Users\HP\AppData\Local\Temp\playwright-java-11578875638005377113\package\lib\server\dispatchers\dispatcher.js:94:40)
-    at DispatcherConnection.dispatch (C:\Users\HP\AppData\Local\Temp\playwright-java-11578875638005377113\package\lib\server\dispatchers\dispatcher.js:361:39)
+    at ProgressController.run (C:\Users\HP\AppData\Local\Temp\playwright-java-2581795909821857912\package\lib\server\progress.js:75:26)
+    at Frame.fill (C:\Users\HP\AppData\Local\Temp\playwright-java-2581795909821857912\package\lib\server\frames.js:1072:23)
+    at FrameDispatcher.fill (C:\Users\HP\AppData\Local\Temp\playwright-java-2581795909821857912\package\lib\server\dispatchers\frameDispatcher.js:170:30)
+    at FrameDispatcher._handleCommand (C:\Users\HP\AppData\Local\Temp\playwright-java-2581795909821857912\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\HP\AppData\Local\Temp\playwright-java-2581795909821857912\package\lib\server\dispatchers\dispatcher.js:361:39)
 }
 Call log:
 -   - waiting for locator("//input[@id='username']")
@@ -176,7 +175,7 @@ at com.microsoft.playwright.impl.FrameImpl.fill(FrameImpl.java:325)
 at com.microsoft.playwright.impl.LocatorImpl.fill(LocatorImpl.java:250)
 at com.microsoft.playwright.Locator.fill(Locator.java:3075)
 at login.LoginLocators.enterLoginEmailid(LoginLocators.java:26)
-at login.LoginTest.loginWithValidCredCaseSensitive(LoginTest.java:118)
+at login.LoginTest.loginWithValidCredCaseSensitive(LoginTest.java:113)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -200,10 +199,9 @@ at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
 at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
 at org.testng.TestNG.runSuites(TestNG.java:1112)
 at org.testng.TestNG.run(TestNG.java:1079)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
-at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:102)
-at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:91)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
 at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
 at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
 at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
@@ -212,11 +210,11 @@ Caused by: com.microsoft.playwright.TimeoutError: Error {
   message='Timeout 30000ms exceeded.
   name='TimeoutError
   stack='TimeoutError: Timeout 30000ms exceeded.
-    at ProgressController.run (C:\Users\HP\AppData\Local\Temp\playwright-java-11578875638005377113\package\lib\server\progress.js:75:26)
-    at Frame.fill (C:\Users\HP\AppData\Local\Temp\playwright-java-11578875638005377113\package\lib\server\frames.js:1072:23)
-    at FrameDispatcher.fill (C:\Users\HP\AppData\Local\Temp\playwright-java-11578875638005377113\package\lib\server\dispatchers\frameDispatcher.js:170:30)
-    at FrameDispatcher._handleCommand (C:\Users\HP\AppData\Local\Temp\playwright-java-11578875638005377113\package\lib\server\dispatchers\dispatcher.js:94:40)
-    at DispatcherConnection.dispatch (C:\Users\HP\AppData\Local\Temp\playwright-java-11578875638005377113\package\lib\server\dispatchers\dispatcher.js:361:39)
+    at ProgressController.run (C:\Users\HP\AppData\Local\Temp\playwright-java-2581795909821857912\package\lib\server\progress.js:75:26)
+    at Frame.fill (C:\Users\HP\AppData\Local\Temp\playwright-java-2581795909821857912\package\lib\server\frames.js:1072:23)
+    at FrameDispatcher.fill (C:\Users\HP\AppData\Local\Temp\playwright-java-2581795909821857912\package\lib\server\dispatchers\frameDispatcher.js:170:30)
+    at FrameDispatcher._handleCommand (C:\Users\HP\AppData\Local\Temp\playwright-java-2581795909821857912\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\HP\AppData\Local\Temp\playwright-java-2581795909821857912\package\lib\server\dispatchers\dispatcher.js:361:39)
 }
 Call log:
 -   - waiting for locator("//input[@id='username']")
@@ -224,18 +222,18 @@ Call log:
 at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:254)
 at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
 at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:130)
-... 44 more
+... 43 more
 ]]>
             </full-stacktrace>
           </exception> <!-- com.microsoft.playwright.TimeoutError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginWithValidCredCaseSensitive -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:login.LoginTest@7fe8ea47]" started-at="2025-12-02T18:30:14 IST" name="tearDown" finished-at="2025-12-02T18:30:14 IST" duration-ms="592" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:login.LoginTest@1df82230]" started-at="2025-12-25T23:30:47 IST" name="tearDown" finished-at="2025-12-25T23:30:48 IST" duration-ms="619" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- login.LoginTest -->
-    </test> <!-- Surefire test -->
-  </suite> <!-- Surefire suite -->
+    </test> <!-- LoginTests -->
+  </suite> <!-- Suite -->
 </testng-results>

@@ -9,23 +9,24 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">LoginTests</a></td><td class="num">8</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">63,505</td><td></td><td></td></tr>
+<tr><td><a href="#t0">LoginTests</a></td><td class="num">8</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">82,704</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">LoginTests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">login.LoginTest</td><td><a href="#m0">loginButtonDisabledWithoutInput</a></td><td rowspan="1">1766685608362</td><td rowspan="1">3225</td></tr><tr class="failedeven"><td><a href="#m1">loginWithValidCredCaseSensitive</a></td><td rowspan="1">1766685617554</td><td rowspan="1">30023</td></tr><tr><th colspan="4">LoginTests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="8">login.LoginTest</td><td><a href="#m2">loginButtonEnabledAfterInput</a></td><td rowspan="1">1766685611604</td><td rowspan="1">651</td></tr><tr class="passedeven"><td><a href="#m3">loginWithEmptyInputs</a></td><td rowspan="1">1766685612260</td><td rowspan="1">217</td></tr><tr class="passedeven"><td><a href="#m4">loginWithEmptyPassword</a></td><td rowspan="1">1766685612481</td><td rowspan="1">127</td></tr><tr class="passedeven"><td><a href="#m5">loginWithEmptyUsername</a></td><td rowspan="1">1766685612612</td><td rowspan="1">139</td></tr><tr class="passedeven"><td><a href="#m6">loginWithInvalidCred</a></td><td rowspan="1">1766685612755</td><td rowspan="1">999</td></tr><tr class="passedeven"><td><a href="#m7">loginWithInvalidEmail</a></td><td rowspan="1">1766685613768</td><td rowspan="1">201</td></tr><tr class="passedeven"><td><a href="#m8">loginWithInvalidPassword</a></td><td rowspan="1">1766685613973</td><td rowspan="1">402</td></tr><tr class="passedeven"><td><a href="#m9">loginWithValidCred</a></td><td rowspan="1">1766685614381</td><td rowspan="1">3166</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">LoginTests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">login.LoginTest</td><td><a href="#m0">loginButtonDisabledWithoutInput</a></td><td rowspan="1">1766683473786</td><td rowspan="1">4248</td></tr><tr class="failedeven"><td><a href="#m1">loginWithValidCredCaseSensitive</a></td><td rowspan="1">1766683483947</td><td rowspan="1">30015</td></tr><tr><th colspan="4">LoginTests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="8">login.LoginTest</td><td><a href="#m2">loginButtonEnabledAfterInput</a></td><td rowspan="1">1766683478066</td><td rowspan="1">697</td></tr><tr class="passedeven"><td><a href="#m3">loginWithEmptyInputs</a></td><td rowspan="1">1766683478785</td><td rowspan="1">505</td></tr><tr class="passedeven"><td><a href="#m4">loginWithEmptyPassword</a></td><td rowspan="1">1766683479313</td><td rowspan="1">275</td></tr><tr class="passedeven"><td><a href="#m5">loginWithEmptyUsername</a></td><td rowspan="1">1766683479596</td><td rowspan="1">230</td></tr><tr class="passedeven"><td><a href="#m6">loginWithInvalidCred</a></td><td rowspan="1">1766683479834</td><td rowspan="1">496</td></tr><tr class="passedeven"><td><a href="#m7">loginWithInvalidEmail</a></td><td rowspan="1">1766683480330</td><td rowspan="1">233</td></tr><tr class="passedeven"><td><a href="#m8">loginWithInvalidPassword</a></td><td rowspan="1">1766683480563</td><td rowspan="1">229</td></tr><tr class="passedeven"><td><a href="#m9">loginWithValidCred</a></td><td rowspan="1">1766683480800</td><td rowspan="1">3147</td></tr></tbody>
 </table>
 <h2>LoginTests</h2><h3 id="m0">login.LoginTest#loginButtonDisabledWithoutInput</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Login button should be disabled when no login input is entered expected [true] but found [false]
 	at login.LoginTest.loginButtonDisabledWithoutInput(LoginTest.java:96)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+	at java.base/java.util.ArrayList.forEach(Unknown Source)
+	at main.Main.main(Main.java:15)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m1">login.LoginTest#loginWithValidCredCaseSensitive</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">com.microsoft.playwright.TimeoutError: Error {
   message=&apos;Timeout 30000ms exceeded.
   name=&apos;TimeoutError
   stack=&apos;TimeoutError: Timeout 30000ms exceeded.
-    at ProgressController.run (C:\Users\HP\AppData\Local\Temp\playwright-java-2581795909821857912\package\lib\server\progress.js:75:26)
-    at Frame.fill (C:\Users\HP\AppData\Local\Temp\playwright-java-2581795909821857912\package\lib\server\frames.js:1072:23)
-    at FrameDispatcher.fill (C:\Users\HP\AppData\Local\Temp\playwright-java-2581795909821857912\package\lib\server\dispatchers\frameDispatcher.js:170:30)
-    at FrameDispatcher._handleCommand (C:\Users\HP\AppData\Local\Temp\playwright-java-2581795909821857912\package\lib\server\dispatchers\dispatcher.js:94:40)
-    at DispatcherConnection.dispatch (C:\Users\HP\AppData\Local\Temp\playwright-java-2581795909821857912\package\lib\server\dispatchers\dispatcher.js:361:39)
+    at ProgressController.run (C:\Users\HP\AppData\Local\Temp\playwright-java-15468917533946693807\package\lib\server\progress.js:75:26)
+    at Frame.fill (C:\Users\HP\AppData\Local\Temp\playwright-java-15468917533946693807\package\lib\server\frames.js:1072:23)
+    at FrameDispatcher.fill (C:\Users\HP\AppData\Local\Temp\playwright-java-15468917533946693807\package\lib\server\dispatchers\frameDispatcher.js:170:30)
+    at FrameDispatcher._handleCommand (C:\Users\HP\AppData\Local\Temp\playwright-java-15468917533946693807\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\HP\AppData\Local\Temp\playwright-java-15468917533946693807\package\lib\server\dispatchers\dispatcher.js:361:39)
 }
 Call log:
 -   - waiting for locator(&quot;//input[@id=&apos;username&apos;]&quot;)
@@ -45,16 +46,17 @@ Call log:
 	at com.microsoft.playwright.Locator.fill(Locator.java:3075)
 	at login.LoginLocators.enterLoginEmailid(LoginLocators.java:26)
 	at login.LoginTest.loginWithValidCredCaseSensitive(LoginTest.java:113)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(Unknown Source)
+	at main.Main.main(Main.java:15)
 Caused by: com.microsoft.playwright.TimeoutError: Error {
   message=&apos;Timeout 30000ms exceeded.
   name=&apos;TimeoutError
   stack=&apos;TimeoutError: Timeout 30000ms exceeded.
-    at ProgressController.run (C:\Users\HP\AppData\Local\Temp\playwright-java-2581795909821857912\package\lib\server\progress.js:75:26)
-    at Frame.fill (C:\Users\HP\AppData\Local\Temp\playwright-java-2581795909821857912\package\lib\server\frames.js:1072:23)
-    at FrameDispatcher.fill (C:\Users\HP\AppData\Local\Temp\playwright-java-2581795909821857912\package\lib\server\dispatchers\frameDispatcher.js:170:30)
-    at FrameDispatcher._handleCommand (C:\Users\HP\AppData\Local\Temp\playwright-java-2581795909821857912\package\lib\server\dispatchers\dispatcher.js:94:40)
-    at DispatcherConnection.dispatch (C:\Users\HP\AppData\Local\Temp\playwright-java-2581795909821857912\package\lib\server\dispatchers\dispatcher.js:361:39)
+    at ProgressController.run (C:\Users\HP\AppData\Local\Temp\playwright-java-15468917533946693807\package\lib\server\progress.js:75:26)
+    at Frame.fill (C:\Users\HP\AppData\Local\Temp\playwright-java-15468917533946693807\package\lib\server\frames.js:1072:23)
+    at FrameDispatcher.fill (C:\Users\HP\AppData\Local\Temp\playwright-java-15468917533946693807\package\lib\server\dispatchers\frameDispatcher.js:170:30)
+    at FrameDispatcher._handleCommand (C:\Users\HP\AppData\Local\Temp\playwright-java-15468917533946693807\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\HP\AppData\Local\Temp\playwright-java-15468917533946693807\package\lib\server\dispatchers\dispatcher.js:361:39)
 }
 Call log:
 -   - waiting for locator(&quot;//input[@id=&apos;username&apos;]&quot;)
@@ -62,8 +64,8 @@ Call log:
 	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:254)
 	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
 	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:130)
-	... 43 more
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+	... 37 more
+... Removed 22 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m2">login.LoginTest#loginButtonEnabledAfterInput</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m3">login.LoginTest#loginWithEmptyInputs</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m4">login.LoginTest#loginWithEmptyPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>

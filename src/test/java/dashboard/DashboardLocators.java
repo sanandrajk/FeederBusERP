@@ -25,9 +25,12 @@ public class DashboardLocators {
     public DashboardLocators(Page page) {
         this.page = page;
         this.dashboardText = page.locator("//span[text()=\"Metro Connect\"]");
-      //  this.loginPassword = page.locator("//input[@id='password']");
-        //this.loginButton = page.locator("//button[@type='submit']");
-        //this.loginErrorText = page.locator("//span[contains(@class, 'text-red-700')]");
+        this.dash_leftpanel_dashboard = page.locator("//span[text()='Dashboard']");
+        this.dash_leftpanel_livetracking = page.locator("//span[text()='Live Tracking']");
+        this.dash_leftpanel_busmanagement = page.locator("//a[@id='leftpanel    -busmanagement']");
+        this.dash_leftpanel_busschedule = page.locator("//span[text()='Bus Schedule']");
+        this.dash_leftpanel_employees = page.locator("//span[text()='Employees']");
+        this.dash_leftpanel_logout = page.locator("//span[text()='Logout']");
     
     }
 
@@ -36,6 +39,14 @@ public class DashboardLocators {
 
     public String dashboardText() {
         return dashboardText.textContent();
+    }
+
+
+
+
+    public void clickClusterTab() {
+       dash_leftpanel_busschedule.click();
+       System.out.println("Clicked on Bus Schedule tab from left panel");
     }
 }
 

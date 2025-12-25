@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
-  <test thread-count="5" name="LoginTests(failed)" verbose="0">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="LoginTests(failed)">
     <classes>
       <class name="login.LoginTest">
         <methods>
-          <include name="loginWithValidCredCaseSensitive"/>
           <include name="tearDown"/>
+          <include name="loginWithValidCredCaseSensitive"/>
           <include name="setup"/>
           <include name="loginButtonDisabledWithoutInput"/>
           <include name="init"/>
