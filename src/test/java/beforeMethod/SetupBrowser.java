@@ -19,7 +19,7 @@ public class SetupBrowser {
     @BeforeClass
     public void setup() {
         playwright = Playwright.create();
-        browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
+        browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(true));
         page = browser.newPage();
         page.navigate(values.Values.BASE_URL);
         System.out.println("Browser and URL are launched");
