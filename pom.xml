@@ -33,6 +33,7 @@
     <plugins>
 
         <!-- Run Java main class -->
+        <!--
 <plugin>
     <groupId>org.codehaus.mojo</groupId>
     <artifactId>exec-maven-plugin</artifactId>
@@ -41,6 +42,7 @@
         <mainClass>main.Main</mainClass>
     </configuration>
 </plugin>
+-->
 
 
         <!-- TestNG execution -->

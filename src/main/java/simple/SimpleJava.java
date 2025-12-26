@@ -1,7 +1,7 @@
-package main;
+package simple;
 
 
-public class Simplejava {
+public class Main {
     public static void main(String[] args) throws Exception {
         System.out.println("Triggering TestNG via Maven...");
         Process process = Runtime.getRuntime().exec(
