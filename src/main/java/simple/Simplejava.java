@@ -1,4 +1,4 @@
-package main;
+package simple;
 
 
 public class Main {
