@@ -1,8 +1,8 @@
-package main;
+package sample;
 
 import org.testng.TestNG;
 
-public class Main {
+public class SampleCheck {
     public static void main(String[] args) {
         TestNG testng = new TestNG();
         testng.setTestSuites(

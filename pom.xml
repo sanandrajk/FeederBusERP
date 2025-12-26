@@ -50,7 +50,7 @@
             <version>3.2.5</version>
             <configuration>
                 <suiteXmlFiles>
-                    <suiteXmlFile>testng.xml</suiteXmlFile>
+                    <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
                 </suiteXmlFiles>
             </configuration>
         </plugin>
