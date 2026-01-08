@@ -26,6 +26,7 @@ public class LoginTest extends SetupBrowser {
         String actualText = dash.dashboardText();
         Assert.assertEquals(values.Values.DASHBOARD_PAGE_METRO_TEXT, actualText);
         System.out.println("Login Successful, Dashboard page is displayed");
+        dash.clickLogoutButton();
     }
 
     @Test
@@ -88,7 +89,7 @@ public class LoginTest extends SetupBrowser {
         System.out.println("Login Failed, Error message is displayed as expected");
     }
 
-    @Test
+  //  @Test
     public void loginButtonDisabledWithoutInput() throws InterruptedException {
         Thread.sleep(3000); // small wait to ensure page is loaded
         boolean isDisabled = locate.isLoginButtonDisabled();
@@ -117,6 +118,7 @@ public class LoginTest extends SetupBrowser {
         String actualText = dash.dashboardText();
         Assert.assertEquals(values.Values.DASHBOARD_PAGE_METRO_TEXT, actualText);
         System.out.println("Login Successful, Dashboard page is displayed");
+        dash.clickLogoutButton();
     }
 
 

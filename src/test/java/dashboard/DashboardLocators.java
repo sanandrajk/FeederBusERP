@@ -48,6 +48,10 @@ public class DashboardLocators {
        dash_leftpanel_busschedule.click();
        System.out.println("Clicked on Bus Schedule tab from left panel");
     }
+
+
+    public void clickLogoutButton() {
+        dash_leftpanel_logout.click();
+        System.out.println("Clicked on Logout button");
+    }
 }
-
-
