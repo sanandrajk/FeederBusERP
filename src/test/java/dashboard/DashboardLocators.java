@@ -60,10 +60,10 @@ public class DashboardLocators {
     
     //dashboard - passengers locators
     Locator dash_total_passengers;
-    private Locator dash_passenger_male;
-    private Locator dash_passenger_female;
-    private Locator dash_passenger_child;
-    private Locator dash_passenger_others;
+    Locator dash_passenger_male;
+    Locator dash_passenger_female;
+    Locator dash_passenger_child;
+    Locator dash_passenger_others;
 
     //dashboard - live buses locators
     Locator dash_live_buses_total;  
@@ -116,10 +116,10 @@ public class DashboardLocators {
 
         //dashboard - passengers
         this.dash_total_passengers = page.locator("xpath=//span[@class='total-passengers-value']");
-        this.dash_passenger_male = page.locator("//div[@class='passengers-card']//p[text()='    Male    ']/following-sibling::h3");
-        this.dash_passenger_female  = page.locator("//div[@class='passengers-card']//p[text()='Female']/following-sibling::h3");
-        this.dash_passenger_child = page.locator("//div[@class='passengers-card']//p[text()='Child']/following-sibling::h3");
-        this.dash_passenger_others = page.locator("//div[@class='passengers-card']//p[text()='Others']/following-sibling::h3");
+        this.dash_passenger_male = page.locator("//span[@class='category-label' and normalize-space()='Male']\r\n" +"/following-sibling::span[@class='category-value']");
+        this.dash_passenger_female  = page.locator("//span[@class='category-label' and normalize-space()='Female']\r\n" +"/following-sibling::span[@class='category-value']");
+        this.dash_passenger_child = page.locator("//span[@class='category-label' and normalize-space()='Child']\r\n" +"/following-sibling::span[@class='category-value']");
+        this.dash_passenger_others = page.locator("//span[@class='category-label' and normalize-space()='Others']\r\n" +"/following-sibling::span[@class='category-value']");
         
         //dashboard - live buses
         this.dash_live_buses_total = page.locator("xpath=//div[@class='status-card-label' and normalize-space()='Total Buses']/preceding-sibling::div[@class='status-card-value']");
@@ -373,7 +373,69 @@ public void checkUIandAPIValues_IssuedPassAPI_Detail(String keyFromAPI, String p
     System.out.println("UI and API values match - SUCCESS");
 }
 
+public void checkUIandAPIValues_PassengerAPI_Detail(String keyFromAPI, String paymentType, Locator element, String APIEndPointForRevenue) throws InterruptedException {
 
+    /* ---------- UI PART ---------- */
+        Thread.sleep(5000);
+
+    String uiValue = element.textContent().trim();
+    int uiTotalValue = Integer.parseInt(uiValue.replaceAll("[^0-9]", ""));
+
+    System.out.println("UI Value (Integer): " + uiTotalValue);
+    String token = (String) page.evaluate(
+            "() => localStorage.getItem('token')");
+
+    /* ---------- API CONTEXT ---------- */
+
+    Map<String, String> headers = new HashMap<>();
+    headers.put("Authorization", "Bearer " + token);
+    headers.put("Content-Type", "application/json");
+
+    // ❌ Do NOT create Playwright again if you already have one
+    Playwright playwright = Playwright.create();
+    APIRequestContext apiContext = playwright.request().newContext(
+            new APIRequest.NewContextOptions()
+                    .setBaseURL(values.Values.API_BASE_URL)
+                    .setExtraHTTPHeaders(headers)
+    );
+
+    /* ---------- API CALL ---------- */
+    APIResponse response = apiContext.get(APIEndPointForRevenue);
+    Assert.assertEquals(response.status(), 200, "API status code mismatch");
+
+    String responseBody = response.text();
+    JSONObject json = new JSONObject(responseBody);
+    /* ---------- API PARSING ---------- */
+
+    JSONArray paymentArray = json
+            .getJSONObject("data")
+            .getJSONArray("passenger_breakdown"); //THIS IS THE ONLY CHANGE FROM THE ABOVE METHOD
+
+    double apiValue = -1;
+
+    for (int i = 0; i < paymentArray.length(); i++) {
+        JSONObject payment = paymentArray.getJSONObject(i);
+
+        if (paymentType.equalsIgnoreCase(payment.getString("ticket_type"))) {
+            apiValue = payment.getDouble(keyFromAPI); // amount OR count
+            break;
+        }
+    }
+
+    // Safety check
+    Assert.assertTrue(apiValue >= 0,
+            "Passenger type not found in API: " + paymentType);
+
+    int apiIntegerValue = (int) apiValue;
+    System.out.println("API Value (Integer): " + apiIntegerValue);
+
+    /* ---------- UI vs API ASSERT ---------- */
+
+    Assert.assertEquals(uiTotalValue, apiIntegerValue,
+            "UI and API values do not match");
+
+    System.out.println("UI and API values match - SUCCESS");
+}
 
 public void checkUIandAPIValues_busStatusAPI(String keyFromAPI, Locator element, String APIEndPoint) throws InterruptedException {        //Find total cash revenue
     Thread.sleep(5000);

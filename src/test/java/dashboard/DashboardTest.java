@@ -455,47 +455,9 @@ public void checkOneMonthTotalPassTicketsFromDashboard_FB_ERP_Dash_39() throws I
     dash.checkUIandAPIValues_revenueAPI_Detail("count", "PASS", dash.dash_tickets_pass, values.Values.getDashboardRevenueEndpointForPastOneMonth()); 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//--------------------------------- TODAY : PASSENGERS -----------------------------------------
 @Test
-public void checkTotalTicketsFromDashboard() throws InterruptedException {
-    login.enterLoginEmailid(values.Values.LOGIN_EMAIL_TEST);
-    login.enterLoginPassword(values.Values.LOGIN_PASSWORD);
-    login.clickLoginButton();
-    Thread.sleep(3000);
-    dash.checkUIandAPIValues_revenueAPI("total_tickets", dash.dash_total_tickets, values.Values.getDashboardRevenueEndpointForToday());
-}
-
-@Test
-public void checkTotalPassengersFromDashboard() throws InterruptedException {
+public void checkTotaytotalPassengersFromDashboard_FB_ERP_Dash_40() throws InterruptedException {
     login.enterLoginEmailid(values.Values.LOGIN_EMAIL_TEST);
     login.enterLoginPassword(values.Values.LOGIN_PASSWORD);
     login.clickLoginButton();
@@ -504,7 +466,157 @@ public void checkTotalPassengersFromDashboard() throws InterruptedException {
 }
 
 @Test
-public void checkTotalLiveBusesFromDashboard() throws InterruptedException {
+public void checkTodayTotalMalePassengersFromDashboard_FB_ERP_Dash_41() throws InterruptedException {
+    login.enterLoginEmailid(values.Values.LOGIN_EMAIL_TEST);
+    login.enterLoginPassword(values.Values.LOGIN_PASSWORD);
+    login.clickLoginButton();
+    Thread.sleep(3000);
+    dash.checkUIandAPIValues_PassengerAPI_Detail("count", "MALE", dash.dash_passenger_male, values.Values.getDashboardRevenueEndpointForToday()); 
+}
+
+@Test
+public void checkTodayTotalFemalePassengersFromDashboard_FB_ERP_Dash_42() throws InterruptedException {
+    login.enterLoginEmailid(values.Values.LOGIN_EMAIL_TEST);
+    login.enterLoginPassword(values.Values.LOGIN_PASSWORD);
+    login.clickLoginButton();
+    Thread.sleep(3000);
+    dash.checkUIandAPIValues_PassengerAPI_Detail("count", "FEMALE", dash.dash_passenger_female, values.Values.getDashboardRevenueEndpointForToday()); 
+}
+
+@Test
+public void checkTodayTotalChildPassengersFromDashboard_FB_ERP_Dash_43() throws InterruptedException {
+    login.enterLoginEmailid(values.Values.LOGIN_EMAIL_TEST);
+    login.enterLoginPassword(values.Values.LOGIN_PASSWORD);
+    login.clickLoginButton();
+    Thread.sleep(3000);
+    dash.checkUIandAPIValues_PassengerAPI_Detail("count", "CHILD", dash.dash_passenger_child, values.Values.getDashboardRevenueEndpointForToday()); 
+}
+
+@Test
+public void checkTodayTotalOthersPassengersFromDashboard_FB_ERP_Dash_44() throws InterruptedException {
+    login.enterLoginEmailid(values.Values.LOGIN_EMAIL_TEST);
+    login.enterLoginPassword(values.Values.LOGIN_PASSWORD);
+    login.clickLoginButton();
+    Thread.sleep(3000);
+    dash.checkUIandAPIValues_PassengerAPI_Detail("count", "OTHERS", dash.dash_passenger_others, values.Values.getDashboardRevenueEndpointForToday()); 
+}
+
+//--------------------------------- ONE WEEK : PASSENGERS -----------------------------------------
+@Test
+public void checkOneWeektotalPassengersFromDashboard_FB_ERP_Dash_45() throws InterruptedException {
+    login.enterLoginEmailid(values.Values.LOGIN_EMAIL_TEST);
+    login.enterLoginPassword(values.Values.LOGIN_PASSWORD);
+    login.clickLoginButton();
+    Thread.sleep(3000);
+    dash.selectPastOneWeekDataFromCalendar();
+    Thread.sleep(2000);
+    dash.checkUIandAPIValues_revenueAPI("total_passengers", dash.dash_total_passengers, values.Values.getDashboardRevenueEndpointForPastOneWeek());
+}
+
+@Test
+public void checkOneWeekTotalMalePassengersFromDashboard_FB_ERP_Dash_46() throws InterruptedException {
+    login.enterLoginEmailid(values.Values.LOGIN_EMAIL_TEST);
+    login.enterLoginPassword(values.Values.LOGIN_PASSWORD);
+    login.clickLoginButton();
+    Thread.sleep(3000);
+    dash.selectPastOneWeekDataFromCalendar();
+    Thread.sleep(2000);
+    dash.checkUIandAPIValues_PassengerAPI_Detail("count", "MALE", dash.dash_passenger_male, values.Values.getDashboardRevenueEndpointForPastOneWeek()); 
+}
+
+@Test
+public void checkOneWeekTotalFemalePassengersFromDashboard_FB_ERP_Dash_47() throws InterruptedException {
+    login.enterLoginEmailid(values.Values.LOGIN_EMAIL_TEST);
+    login.enterLoginPassword(values.Values.LOGIN_PASSWORD);
+    login.clickLoginButton();
+    Thread.sleep(3000);
+    dash.selectPastOneWeekDataFromCalendar();
+    Thread.sleep(2000);
+    dash.checkUIandAPIValues_PassengerAPI_Detail("count", "FEMALE", dash.dash_passenger_female, values.Values.getDashboardRevenueEndpointForPastOneWeek()); 
+}
+
+@Test
+public void checkOneWeekTotalChildPassengersFromDashboard_FB_ERP_Dash_48() throws InterruptedException {
+    login.enterLoginEmailid(values.Values.LOGIN_EMAIL_TEST);
+    login.enterLoginPassword(values.Values.LOGIN_PASSWORD);
+    login.clickLoginButton();
+    Thread.sleep(3000);
+    dash.selectPastOneWeekDataFromCalendar();
+    Thread.sleep(2000);
+    dash.checkUIandAPIValues_PassengerAPI_Detail("count", "CHILD", dash.dash_passenger_child, values.Values.getDashboardRevenueEndpointForPastOneWeek()); 
+}
+
+@Test
+public void checkOneWeekTotalOthersPassengersFromDashboard_FB_ERP_Dash_49() throws InterruptedException {
+    login.enterLoginEmailid(values.Values.LOGIN_EMAIL_TEST);
+    login.enterLoginPassword(values.Values.LOGIN_PASSWORD);
+    login.clickLoginButton();
+    Thread.sleep(3000);
+    dash.selectPastOneWeekDataFromCalendar();
+    Thread.sleep(2000);
+    dash.checkUIandAPIValues_PassengerAPI_Detail("count", "OTHERS", dash.dash_passenger_others, values.Values.getDashboardRevenueEndpointForPastOneWeek()); 
+}
+
+//--------------------------------- ONE MONTH : PASSENGERS -----------------------------------------
+@Test
+public void checkOneMonthTotalPassengersFromDashboard_FB_ERP_Dash_50() throws InterruptedException {
+    login.enterLoginEmailid(values.Values.LOGIN_EMAIL_TEST);
+    login.enterLoginPassword(values.Values.LOGIN_PASSWORD);
+    login.clickLoginButton();
+    Thread.sleep(3000);
+    dash.selectPastOneMonthDataFromCalendar();
+    Thread.sleep(2000);
+    dash.checkUIandAPIValues_revenueAPI("total_passengers", dash.dash_total_passengers, values.Values.getDashboardRevenueEndpointForPastOneMonth());
+}
+
+@Test
+public void checkOneMonthTotalMalePassengersFromDashboard_FB_ERP_Dash_51() throws InterruptedException {
+    login.enterLoginEmailid(values.Values.LOGIN_EMAIL_TEST);
+    login.enterLoginPassword(values.Values.LOGIN_PASSWORD);
+    login.clickLoginButton();
+    Thread.sleep(3000);
+    dash.selectPastOneMonthDataFromCalendar();
+    Thread.sleep(2000);
+    dash.checkUIandAPIValues_PassengerAPI_Detail("count", "MALE", dash.dash_passenger_male, values.Values.getDashboardRevenueEndpointForPastOneMonth()); 
+}
+
+@Test
+public void checkOneMonthTotalFemalePassengersFromDashboard_FB_ERP_Dash_52() throws InterruptedException {
+    login.enterLoginEmailid(values.Values.LOGIN_EMAIL_TEST);
+    login.enterLoginPassword(values.Values.LOGIN_PASSWORD);
+    login.clickLoginButton();
+    Thread.sleep(3000);
+    dash.selectPastOneMonthDataFromCalendar();
+    Thread.sleep(2000);
+    dash.checkUIandAPIValues_PassengerAPI_Detail("count", "FEMALE", dash.dash_passenger_female, values.Values.getDashboardRevenueEndpointForPastOneMonth()); 
+}
+
+@Test
+public void checkOneMonthTotalChildPassengersFromDashboard_FB_ERP_Dash_53() throws InterruptedException {
+    login.enterLoginEmailid(values.Values.LOGIN_EMAIL_TEST);
+    login.enterLoginPassword(values.Values.LOGIN_PASSWORD);
+    login.clickLoginButton();
+    Thread.sleep(3000);
+    dash.selectPastOneMonthDataFromCalendar();
+    Thread.sleep(2000);
+    dash.checkUIandAPIValues_PassengerAPI_Detail("count", "CHILD", dash.dash_passenger_child, values.Values.getDashboardRevenueEndpointForPastOneMonth()); 
+}
+
+@Test
+public void checkOneMonthTotalOthersPassengersFromDashboard_FB_ERP_Dash_54() throws InterruptedException {
+    login.enterLoginEmailid(values.Values.LOGIN_EMAIL_TEST);
+    login.enterLoginPassword(values.Values.LOGIN_PASSWORD);
+    login.clickLoginButton();
+    Thread.sleep(3000);
+    dash.selectPastOneMonthDataFromCalendar();
+    Thread.sleep(2000);
+    dash.checkUIandAPIValues_PassengerAPI_Detail("count", "OTHERS", dash.dash_passenger_others, values.Values.getDashboardRevenueEndpointForPastOneMonth()); 
+}
+
+//--------------------------------- LIVE BUSES -----------------------------------------
+
+@Test
+public void checkTotalBusesFromDashboard_FB_ERP_Dash_55() throws InterruptedException {
     login.enterLoginEmailid(values.Values.LOGIN_EMAIL_TEST);
     login.enterLoginPassword(values.Values.LOGIN_PASSWORD);
     login.clickLoginButton();
@@ -513,7 +625,7 @@ public void checkTotalLiveBusesFromDashboard() throws InterruptedException {
 }
 
 @Test
-public void checkLiveBusesLiveFromDashboard() throws InterruptedException {
+public void checkLiveBusesFromDashboard_FB_ERP_Dash_56() throws InterruptedException {
     login.enterLoginEmailid(values.Values.LOGIN_EMAIL_TEST);
     login.enterLoginPassword(values.Values.LOGIN_PASSWORD);
     login.clickLoginButton();
@@ -522,7 +634,7 @@ public void checkLiveBusesLiveFromDashboard() throws InterruptedException {
 }
 
 @Test
-public void checkIdleBusesFromDashboard() throws InterruptedException {
+public void checkIdleBusesFromDashboard_FB_ERP_Dash_57() throws InterruptedException {
     login.enterLoginEmailid(values.Values.LOGIN_EMAIL_TEST);
     login.enterLoginPassword(values.Values.LOGIN_PASSWORD);
     login.clickLoginButton();
@@ -531,7 +643,7 @@ public void checkIdleBusesFromDashboard() throws InterruptedException {
 }
 
 //@Test //Disabled due to data issue
-public void checkScheduledTripsFromDashboard() throws InterruptedException {
+public void checkScheduledTripsFromDashboardFB_ERP_Dash_58_1() throws InterruptedException {
     login.enterLoginEmailid(values.Values.LOGIN_EMAIL_TEST);
     login.enterLoginPassword(values.Values.LOGIN_PASSWORD);
     login.clickLoginButton();
@@ -540,7 +652,7 @@ public void checkScheduledTripsFromDashboard() throws InterruptedException {
 }
 
 //@Test //Disabled due to data issue
-public void checkCompletedTripsFromDashboard() throws InterruptedException {
+public void checkCompletedTripsFromDashboard_FB_ERP_Dash_58_2() throws InterruptedException {
     login.enterLoginEmailid(values.Values.LOGIN_EMAIL_TEST);
     login.enterLoginPassword(values.Values.LOGIN_PASSWORD);
     login.clickLoginButton();
@@ -549,7 +661,7 @@ public void checkCompletedTripsFromDashboard() throws InterruptedException {
 }
 
 @Test
-public void checkEPKFromDashboard() throws InterruptedException {
+public void checkEPKFromDashboard_FB_ERP_Dash_59() throws InterruptedException {
     login.enterLoginEmailid(values.Values.LOGIN_EMAIL_TEST);
     login.enterLoginPassword(values.Values.LOGIN_PASSWORD);
     login.clickLoginButton();
@@ -557,7 +669,66 @@ public void checkEPKFromDashboard() throws InterruptedException {
     dash.checkUIandAPIValues_busStatusAPI("estimated_performance_per_kilometre", dash.dash_live_buses_epk, values.Values.DASHBOARD_LIVE_BUSES_API_ENDPOINT);
 }
 
-@Test // done
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//@Test
+public void checkTotalTicketsFromDashboard() throws InterruptedException {
+    login.enterLoginEmailid(values.Values.LOGIN_EMAIL_TEST);
+    login.enterLoginPassword(values.Values.LOGIN_PASSWORD);
+    login.clickLoginButton();
+    Thread.sleep(3000);
+    dash.checkUIandAPIValues_revenueAPI("total_tickets", dash.dash_total_tickets, values.Values.getDashboardRevenueEndpointForToday());
+}
+
+//@Test
+public void checkTotalPassengersFromDashboard() throws InterruptedException {
+    login.enterLoginEmailid(values.Values.LOGIN_EMAIL_TEST);
+    login.enterLoginPassword(values.Values.LOGIN_PASSWORD);
+    login.clickLoginButton();
+    Thread.sleep(3000);
+    dash.checkUIandAPIValues_revenueAPI("total_passengers", dash.dash_total_passengers, values.Values.getDashboardRevenueEndpointForToday());
+}
+
+//@Test
+public void checkTotalLiveBusesFromDashboard() throws InterruptedException {
+    login.enterLoginEmailid(values.Values.LOGIN_EMAIL_TEST);
+    login.enterLoginPassword(values.Values.LOGIN_PASSWORD);
+    login.clickLoginButton();
+    Thread.sleep(3000);
+    dash.checkUIandAPIValues_busStatusAPI("total_buses", dash.dash_live_buses_total, values.Values.DASHBOARD_LIVE_BUSES_API_ENDPOINT);
+}
+
+//@Test
+public void checkLiveBusesLiveFromDashboard() throws InterruptedException {
+    login.enterLoginEmailid(values.Values.LOGIN_EMAIL_TEST);
+    login.enterLoginPassword(values.Values.LOGIN_PASSWORD);
+    login.clickLoginButton();
+    Thread.sleep(3000);
+    dash.checkUIandAPIValues_busStatusAPI("buses_in_operation", dash.dash_live_buses_live, values.Values.DASHBOARD_LIVE_BUSES_API_ENDPOINT);
+}
+
+//@Test
+public void checkIdleBusesFromDashboard() throws InterruptedException {
+    login.enterLoginEmailid(values.Values.LOGIN_EMAIL_TEST);
+    login.enterLoginPassword(values.Values.LOGIN_PASSWORD);
+    login.clickLoginButton();
+    Thread.sleep(3000);
+    dash.checkUIandAPIValues_busStatusAPI("buses_idle", dash.dash_live_buses_idle, values.Values.DASHBOARD_LIVE_BUSES_API_ENDPOINT);
+}
+
+//@Test // done
 public void checkCashPaymentFromDashboard() throws InterruptedException {
     login.enterLoginEmailid(values.Values.LOGIN_EMAIL_TEST);
     login.enterLoginPassword(values.Values.LOGIN_PASSWORD);
@@ -568,7 +739,7 @@ public void checkCashPaymentFromDashboard() throws InterruptedException {
     dash.checkUIandAPIValues_revenueAPI_Detail("amount", "CASH", dash.dash_total_cash_revenue, values.Values.getDashboardRevenueEndpointForPastOneMonth()); 
 }
 
-@Test //done
+//@Test //done
 public void checkCardPaymentFromDashboard() throws InterruptedException {
     login.enterLoginEmailid(values.Values.LOGIN_EMAIL_TEST);
     login.enterLoginPassword(values.Values.LOGIN_PASSWORD);
@@ -579,7 +750,7 @@ public void checkCardPaymentFromDashboard() throws InterruptedException {
     dash.checkUIandAPIValues_revenueAPI_Detail("amount", "CARD", dash.dash_total_card_revenue, values.Values.getDashboardRevenueEndpointForPastOneMonth());    
 }
 
-@Test //done
+//@Test //done
 public void checkUPIPaymentFromDashboard() throws InterruptedException {
     login.enterLoginEmailid(values.Values.LOGIN_EMAIL_TEST);
     login.enterLoginPassword(values.Values.LOGIN_PASSWORD);
