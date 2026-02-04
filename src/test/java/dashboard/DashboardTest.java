@@ -34,6 +34,13 @@ public void verifyAPIIsWorking() throws InterruptedException {
     assertEquals(response.status(), 200);
 }
 
+@AfterMethod(alwaysRun = true)
+public void logoutAfterTest() throws InterruptedException {
+    Thread.sleep(1000);
+    dash.clickLogoutButton();
+    Thread.sleep(1000);
+}
+
 //--------------------------------- TODAY : REVENUE -----------------------------------------
 @Test
 public void checkTodayTotalRevenueFromDashboard_FB_ERP_Dash_1() throws InterruptedException {
