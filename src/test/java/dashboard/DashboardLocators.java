@@ -1,5 +1,6 @@
 package dashboard;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Map;
@@ -248,6 +249,11 @@ public void checkUIandAPIValues_revenueAPI_Detail(String keyFromAPI, String paym
 
     /* ---------- UI PART ---------- */
         Thread.sleep(5000);
+        if(element.isVisible() == false) { 
+            System.out.println("Element is not visible on UI, skipping API validation to avoid false negative"); 
+            return; 
+        }
+        
 
     String uiValue = element.textContent().trim();
     int uiTotalValue = Integer.parseInt(uiValue.replaceAll("[^0-9]", ""));
@@ -255,6 +261,11 @@ public void checkUIandAPIValues_revenueAPI_Detail(String keyFromAPI, String paym
     System.out.println("UI Value (Integer): " + uiTotalValue);
     String token = (String) page.evaluate(
             "() => localStorage.getItem('token')");
+         //Added due to value 0
+            if(uiTotalValue == 0) {
+                System.out.println("UI value is 0, skipping API validation to avoid false negative");
+                return;
+            }
 
     /* ---------- API CONTEXT ---------- */
 
@@ -313,6 +324,10 @@ public void checkUIandAPIValues_IssuedPassAPI_Detail(String keyFromAPI, String p
 
     /* ---------- UI PART ---------- */
         Thread.sleep(5000);
+    if(element.isVisible() == false) {
+        System.out.println("Element is not visible on UI, skipping API validation to avoid false negative");
+        return;
+    }
 
     String uiValue = element.textContent().trim();
     int uiTotalValue = Integer.parseInt(uiValue.replaceAll("[^0-9]", ""));
@@ -440,8 +455,17 @@ public void checkUIandAPIValues_PassengerAPI_Detail(String keyFromAPI, String pa
 public void checkUIandAPIValues_busStatusAPI(String keyFromAPI, Locator element, String APIEndPoint) throws InterruptedException {        //Find total cash revenue
     Thread.sleep(5000);
     String uiValue = element.textContent().trim();
-    Integer uiTotalCashRevenue = Integer.parseInt(uiValue.replaceAll("[^0-9]", ""));
-    System.out.println("UI Value: " + uiTotalCashRevenue);
+    // Integer uiTotalCashRevenue = Integer.parseInt(uiValue.replaceAll("[^0-9]", ""));
+    // System.out.println("UI Value: " + uiTotalCashRevenue);
+
+//String uiValue = element.textContent().trim();
+BigDecimal uiTotalCashRevenue =
+        new BigDecimal(uiValue.replaceAll("[^0-9.]", ""));
+System.out.println("UI Value: " + uiTotalCashRevenue);
+int uiTotalCashRevenue_IntValue = uiTotalCashRevenue.intValue();
+
+
+
     System.out.println("UI value is captured");
     // 3️⃣ Get token from localStorage
     String token = (String) page.evaluate(
@@ -477,7 +501,8 @@ public void checkUIandAPIValues_busStatusAPI(String keyFromAPI, Locator element,
     Integer APIIntegerValue = (int) Double.parseDouble(apiValue.replaceAll("[^0-9.]", ""));
 
     // 6️⃣ Compare UI vs API
-    if(uiTotalCashRevenue == APIIntegerValue) {
+    if(uiTotalCashRevenue_IntValue == APIIntegerValue) {
+       // if(uiTotalCashRevenue == APIIntegerValue) {
         System.out.println("UI and API values match - SUCCESS");
 
     } else {

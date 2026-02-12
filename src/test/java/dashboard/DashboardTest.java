@@ -4,10 +4,12 @@ import com.microsoft.playwright.*;
 
 import login.LoginLocators;
 
+import org.testng.Assert;
 import org.testng.annotations.*;
 import java.util.Map;
 import static org.testng.Assert.assertEquals;
 
+@Listeners(retry.RetryListener.class)
 public class DashboardTest extends beforeMethod.SetupBrowser {
     
   //  private Page page;
@@ -40,6 +42,11 @@ public void logoutAfterTest() throws InterruptedException {
     dash.clickLogoutButton();
     Thread.sleep(1000);
 }
+
+// @Test(retryAnalyzer = retry.RetryAnalyzer.class)
+// public void retryTest() {
+//     Assert.assertTrue(false);
+// }
 
 //--------------------------------- TODAY : REVENUE -----------------------------------------
 @Test

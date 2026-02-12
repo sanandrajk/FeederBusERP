@@ -24,12 +24,15 @@ public class LoginLocators {
 
     public void enterLoginEmailid(String email) {
         loginEmailid.fill(email);
+        System.out.println("Login email is entered");
     }
     public void enterLoginPassword(String password) {
         loginPassword.fill(password);
+        System.out.println("Login password is entered");
     }
     public void clickLoginButton() {
         loginButton.click();
+        System.out.println("Login button is clicked");
     }
 
     // Check whether login button is enabled (returns true if enabled)
